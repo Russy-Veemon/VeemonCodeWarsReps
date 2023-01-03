@@ -120,3 +120,54 @@ def are_you_playing_banjo(name):
     else:
         say_it = name + " does not play banjo"
     return say_it
+
+# Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+
+# Examples input/output:
+
+# XO("ooxx") => true
+# XO("xooxx") => false
+# XO("ooxXm") => true
+# XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
+# XO("zzoo") => false
+
+def xo(s):
+    x_amt = 0
+    o_amt = 0
+    for letter in s:
+        if letter == 'x':
+            x_amt += 1
+        if letter == 'X':
+            x_amt += 1
+        if letter == 'o':
+            o_amt += 1
+        if letter == 'O':
+            o_amt += 1
+    if x_amt == o_amt:
+        return True
+    else:
+        return False
+
+
+# Complete the function so that it finds the average of the three scores passed to it and returns the letter value associated with that grade.
+
+# Numerical Score	Letter Grade
+# 90 <= score <= 100	'A'
+# 80 <= score < 90	'B'
+# 70 <= score < 80	'C'
+# 60 <= score < 70	'D'
+# 0 <= score < 60	'F'
+# Tested values are all between 0 and 100. Theres is no need to check for negative values or values greater than 100.
+
+def get_grade(s1, s2, s3):
+    avg = (s1+s2+s3)/3
+    if avg < 60:
+        return "F"
+    if avg < 70:
+        return "D"
+    if avg < 80:
+        return "C"
+    if avg < 90:
+        return "B"
+    if avg <= 100:
+        return "A"
