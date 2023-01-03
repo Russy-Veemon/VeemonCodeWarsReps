@@ -60,3 +60,63 @@ def human_years_cat_years_dog_years(human_years):
     respective_age = [human_years, catYears, dogYears]
     return (respective_age)
 
+# Debugging sayHello function
+# The starship Enterprise has run into some problem when creating a program to greet everyone as they come aboard. It is your job to fix the code and get the program working again!
+
+def say_hello(name):
+    return "Hello," + " " + name
+
+# In a small town the population is p0 = 1000 at the beginning of a year. The population regularly increases by 2 percent per year and moreover 50 new inhabitants per year come to live in the town. How many years does the town need to see its population greater or equal to p = 1200 inhabitants?
+
+# At the end of the first year there will be: 
+# 1000 + 1000 * 0.02 + 50 => 1070 inhabitants
+
+# At the end of the 2nd year there will be: 
+# 1070 + 1070 * 0.02 + 50 => 1141 inhabitants (** number of inhabitants is an integer **)
+
+# At the end of the 3rd year there will be:
+# 1141 + 1141 * 0.02 + 50 => 1213
+
+# It will need 3 entire years.
+# More generally given parameters:
+
+# p0, percent, aug (inhabitants coming or leaving each year), p (population to equal or surpass)
+
+# the function nb_year should return n number of entire years needed to get a population greater or equal to p.
+
+# aug is an integer, percent a positive or null floating number, p0 and p are positive integers (> 0)
+
+def nb_year(p0, percent, aug, p):
+    n = 0
+    while p0 < p:
+        p0 = int(p0*(1 + percent/100)) + aug
+        n += 1
+    return n
+
+# Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+
+# Note: input will never be an empty string
+
+def fake_bin(x):
+    result = ""
+    for y in x:
+        if int(y) < 5:
+            result += "0"
+        else:
+            result += '1'
+    return result
+
+# Create a function which answers the question "Are you playing banjo?".
+# If your name starts with the letter "R" or lower case "r", you are playing banjo!
+
+# The function takes a name as its only argument, and returns one of the following strings:
+
+def are_you_playing_banjo(name):
+    say_it = ""
+    if name[0] == 'R':
+        say_it = name + " plays banjo"
+    elif name[0] == 'r':
+        say_it = name + " plays banjo"
+    else:
+        say_it = name + " does not play banjo"
+    return say_it
