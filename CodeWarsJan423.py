@@ -21,4 +21,7 @@ def gimme(input):
         return 1
     if input[1] > input[0] and input [1] < input[2]:
         return 1
-    
+    if input[2] < input[0] and input [2] > input[1]:
+        return 2
+    if input[2] > input[0] and input [2] < input[1]:
+        return 2
