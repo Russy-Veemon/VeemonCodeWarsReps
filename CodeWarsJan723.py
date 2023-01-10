@@ -63,6 +63,7 @@ def solution(text, ending):
 # ("Hello", "o")  ==>  1
 # ("Hello", "l")  ==>  2
 # ("", "z")       ==>  0
+# test
 
 def str_count(string, letter):
     count = 0
