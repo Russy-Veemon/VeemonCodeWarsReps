@@ -26,3 +26,11 @@ def printer_error(s):
         if not x in bad_letters:
             num_of_dups += 1
     return str(num_of_dups) + "/" + str(length_of_arr)
+
+# Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+
+def even_or_odd(number):
+    if number % 2 == 0:
+        return "Even"
+    else:
+        return "Odd"
