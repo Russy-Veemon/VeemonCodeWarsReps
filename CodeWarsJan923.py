@@ -12,3 +12,4 @@ def unique_in_order(iterable):
         if iterable[i] != iterable[i-1]:
             result.append(iterable[i])
     return result
+
