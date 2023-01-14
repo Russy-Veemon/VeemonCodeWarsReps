@@ -24,3 +24,14 @@ def maps(a):
     for x in a:
         double_me.append(x*2)
     return double_me
+
+# Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+# invert([1,2,3,4,5]) == [-1,-2,-3,-4,-5]
+# invert([1,-2,3,-4,5]) == [-1,2,-3,4,-5]
+# invert([]) == []
+
+def invert(lst):
+    new_lst = []
+    for x in lst:
+        new_lst.append(-x)
+    return new_lst
