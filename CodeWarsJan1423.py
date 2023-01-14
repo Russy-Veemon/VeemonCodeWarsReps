@@ -14,3 +14,13 @@ def greet(name):
 def longest(a1, a2):
     fusion = a1 + a2
     return ''.join(sorted(list(set(fusion))))
+
+# Given an array of integers, return a new array with each value doubled.
+# For example:
+# [1, 2, 3] --> [2, 4, 6]
+
+def maps(a):
+    double_me = []
+    for x in a:
+        double_me.append(x*2)
+    return double_me
