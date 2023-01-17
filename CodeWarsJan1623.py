@@ -37,3 +37,16 @@ def how_much_i_love_you(nb_petals):
 def litres(time):
     water_drank = time * 0.5
     return int(water_drank)
+
+# You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+# #Examples:
+# Kata.getMiddle("test") should return "es"
+# Kata.getMiddle("testing") should return "t"
+# Kata.getMiddle("middle") should return "dd"
+# Kata.getMiddle("A") should return "A"
+
+def get_middle(s):
+    if len(s) % 2 == 0:
+        return s[int(len(s)/2)-1:int(len(s)/2)+1]
+    else:
+        return s[int(len(s)/2)]
