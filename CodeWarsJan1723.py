@@ -78,3 +78,12 @@ def reverse_words(text):
     words = text.split(" ")
     reversed_words = [word[::-1] for word in words]
     return " ".join(reversed_words)
+
+# A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
+# Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
+
+
+def is_pangram(s):
+    s = s.lower().replace(' ','')
+    unique_letters = set(s)
+    return set('abcdefghijklmnopqrstuvwxyz').issubset(unique_letters)
