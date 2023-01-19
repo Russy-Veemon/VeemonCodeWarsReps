@@ -26,3 +26,12 @@ def index(array, n):
         return -1
     else:
         return array[n] ** n
+
+# When provided with a number between 0-9, return it in words.
+# Input :: 1
+# Output :: "One".
+# If your language supports it, try using a switch statement.
+
+def switch_it_up(number):
+    num_list = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten']
+    return num_list[number]
