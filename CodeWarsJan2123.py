@@ -59,7 +59,23 @@ def check(array, thing):
 # Make a function that returns the value multiplied by 50 and increased by 6. If the value entered is a string it should return "Error".
 
 def problem(a):
-    if isinstance(a, int):
-        return (a * 50) + 6
-    else:
+    if isinstance(a, str):
         return "Error"
+    else:
+        return (a * 50) + 6
+
+# Description:
+# Remove an exclamation mark from the end of a string. For a beginner kata, you can assume that the input data is always a string, no need to verify it.
+# Examples
+# remove("Hi!") == "Hi"
+# remove("Hi!!!") == "Hi!!"
+# remove("!Hi") == "!Hi"
+# remove("!Hi!") == "!Hi"
+# remove("Hi! Hi!") == "Hi! Hi"
+# remove("Hi") == "Hi"
+
+def remove(s):
+    if s.endswith("!"):
+        return s[:-1]
+    else:
+        return s
