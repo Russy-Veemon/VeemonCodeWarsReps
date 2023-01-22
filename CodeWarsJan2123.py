@@ -9,3 +9,18 @@ def update_light(current):
         return 'red'
     if current == 'red':
         return 'green'
+
+# Complete the solution so that the function will break up camel casing, using a space between words.
+# Example
+# "camelCasing"  =>  "camel Casing"
+# "identifier"   =>  "identifier"
+# ""             =>  ""
+
+def solution(s):
+    result = ''
+    for x in s:
+        if x.isupper():
+            result += " " + x
+        else:
+            result += x
+    return result
