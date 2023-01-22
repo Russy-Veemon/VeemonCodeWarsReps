@@ -79,3 +79,20 @@ def remove(s):
         return s[:-1]
     else:
         return s
+
+# Task
+# Given a string str, reverse it and omit all non-alphabetic characters.
+# Example
+# For str = "krishan", the output should be "nahsirk".
+# For str = "ultr53o?n", the output should be "nortlu".
+# Input/Output
+# [input] string str
+# A string consists of lowercase latin letters, digits and symbols.
+# [output] a string
+
+def reverse_letter(string):
+    return ''.join(filter(str.isalpha, string))[::-1]
+    #filter method used to find alphabete only, by asking
+    #for str>>type of variable>> str.isalpha alphabet only
+    #(x, string) to ask for the variable being passed
+    #[::-1] to have the string returned backwards
