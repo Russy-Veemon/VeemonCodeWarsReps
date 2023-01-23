@@ -31,3 +31,23 @@ def count(string):
             char_count[char] = 1
         #if the character is not already in the dictionary add it to the dictionary
     return char_count
+
+# Your job is to write a function which increments a string, to create a new string.
+# If the string already ends with a number, the number should be incremented by 1.
+# If the string does not end with a number. the number 1 should be appended to the new string.
+
+def increment_string(string):
+    if not string:
+        return "1"
+    #checks if the variable is a string
+    if not string[-1].isdigit():
+        return string + "1"
+    #adding the number 1 to a string with no number at the end
+    i = len(string) - 1
+    while i >= 0 and string[i].isdigit():
+        i -= 1
+    #iterates through the string until the the first digit is found in the string
+    number = int(string[i+1:]) + 1
+    #once the first digit is found add 1 number to it
+    leading_zeros = len(string[i+1:]) - len(str(number))
+    return string[:i+1] + "0"*leading_zeros + str(number)
