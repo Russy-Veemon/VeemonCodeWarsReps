@@ -51,3 +51,9 @@ def increment_string(string):
     #once the first digit is found add 1 number to it
     leading_zeros = len(string[i+1:]) - len(str(number))
     return string[:i+1] + "0"*leading_zeros + str(number)
+
+# Create a function called shortcut to remove the lowercase vowels (a, e, i, o, u ) in a given string.
+
+def shortcut(string):
+    vowels = "aeiou"
+    return ''.join([x for x in string if x not in vowels])
