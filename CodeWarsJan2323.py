@@ -26,3 +26,16 @@ def people_with_age_drink(age):
     if age >= 18: return 'drink beer'
     if age >= 14: return 'drink coke'
     else: return 'drink toddy'
+
+# You get an array of numbers, return the sum of all of the positives ones.
+# Example [1,-4,7,12] => 1 + 7 + 12 = 20
+# Note: if there is nothing to sum, the sum is default to 0.
+
+def positive_sum(arr):
+    total = 0
+    if arr == []:
+        return 0
+    for x in arr:
+        if x > 0:
+            total += x
+    return total
