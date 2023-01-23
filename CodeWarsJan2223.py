@@ -15,3 +15,19 @@ def final_grade(exam, projects):
         return 75
     else:
         return 0
+
+# The main idea is to count all the occurring characters in a string. If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
+# What if the string is empty? Then the result should be empty object literal, {}.
+
+def count(string):
+    char_count = {}
+    #create a an empty dictionary for key value pairs
+    for char in string:
+        #iterate through the string
+        if char in char_count:
+            char_count[char] += 1
+        #if the character is already in the dictionary increase the count
+        else:
+            char_count[char] = 1
+        #if the character is not already in the dictionary add it to the dictionary
+    return char_count
