@@ -57,3 +57,12 @@ def increment_string(string):
 def shortcut(string):
     vowels = "aeiou"
     return ''.join([x for x in string if x not in vowels])
+
+# Simple, given a string of words, return the length of the shortest word(s).
+# String will never be empty and you do not need to account for different data types.
+
+def find_short(string):
+    words = string.split()
+    #split turns the string into a list of words
+    return min(len(word) for word in words)
+    #we then iterate through that list and find the smalles length word with min
