@@ -66,3 +66,15 @@ def find_short(string):
     #split turns the string into a list of words
     return min(len(word) for word in words)
     #we then iterate through that list and find the smalles length word with min
+
+# Your team is writing a fancy new text editor and you've been tasked with implementing the line numbering.
+# Write a function which takes a list of strings and returns each line prepended by the correct number.
+# The numbering starts at 1. The format is n: string. Notice the colon and space in between.
+
+def number(lines):
+    numbered_lines = []
+    #create an empty list
+    for i, line in enumerate(lines, start=1):
+        numbered_lines.append(f"{i}: {line}")
+        #iterate through the old list and append to new list proper key value pairs
+    return numbered_lines
