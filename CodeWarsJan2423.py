@@ -11,3 +11,8 @@ def max_sequence(arr):
         current_sum = max(num, current_sum + num)
         max_sum = max(max_sum, current_sum)
     return max_sum
+
+# Write a function get_char() / getChar() which takes a number and returns the corresponding ASCII char for that value.
+
+def get_char(c):
+    return chr(c)
