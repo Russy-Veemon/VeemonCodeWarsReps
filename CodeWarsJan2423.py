@@ -16,3 +16,15 @@ def max_sequence(arr):
 
 def get_char(c):
     return chr(c)
+
+# Replace all vowel to exclamation mark in the sentence. aeiouAEIOU is vowel.
+
+def replace_exclamation(s):
+    vowels = 'aeiouAEIOU'
+    answer = ''
+    for x in s:
+        if x in vowels:
+            answer +='!'
+        else:
+            answer += x
+    return answer
