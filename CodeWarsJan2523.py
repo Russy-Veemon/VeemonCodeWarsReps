@@ -4,3 +4,4 @@ def min_value(digits):
     new_num = list(set(digits))
     new_num.sort()
     return int("".join(map(str, new_num)))
+
