@@ -41,3 +41,20 @@ def no_boring_zeros(n):
     while n % 10 == 0:
         n = n // 10
     return n
+
+# Your online store likes to give out coupons for special occasions. Some customers try to cheat the system by entering invalid codes or using expired coupons.
+# Task
+# Your mission:
+# Write a function called checkCoupon which verifies that a coupon code is valid and not expired.
+# A coupon is no more valid on the day AFTER the expiration date. All dates will be passed as strings in this format: "MONTH DATE, YEAR".
+
+import datetime
+
+def check_coupon(entered_code, correct_code, current_date, expiration_date):
+    if entered_code != correct_code:
+        return False
+    curr_date = datetime.datetime.strptime(current_date, '%B %d, %Y')
+    exp_date = datetime.datetime.strptime(expiration_date, '%B %d, %Y')
+    if curr_date > exp_date:
+        return False
+    return True
