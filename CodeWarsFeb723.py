@@ -9,3 +9,11 @@ def flatten_and_sort(array):
         for x in group:
             flat_arr.append(x)
     return sorted(flat_arr)
+
+# Create a method that accepts a list and an item, and returns true if the item belongs to the list, otherwise false.
+
+def include(arr,item):
+    if item in arr:
+        return True
+    else:
+        return False
