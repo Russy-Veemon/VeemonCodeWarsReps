@@ -10,3 +10,10 @@ def sum_of_differences(arr):
         return 0
     arr.sort(reverse=True)
     return sum([arr[x] - arr[x+1] for x in range(len(arr)-1)])
+
+# Create a class Ball. Ball objects should accept one argument for "ball type" when instantiated.
+# If no arguments are given, ball objects should instantiate with a "ball type" of "regular."
+
+class Ball(object):
+    def __init__(self,ball_type='regular'):
+        self.ball_type = ball_type
