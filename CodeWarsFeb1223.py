@@ -17,3 +17,16 @@ def sum_of_differences(arr):
 class Ball(object):
     def __init__(self,ball_type='regular'):
         self.ball_type = ball_type
+
+# Input: Array of elements
+# ["h","o","l","a"]
+# Output: String with comma delimited elements of the array in th same order.
+# "h,o,l,a"
+# Note: if this seems too simple for you try the next level
+
+def print_array(arr):
+    string = ''
+    for x in arr:
+        string += str(x) +','
+    new_string = string[:-1]
+    return new_string
