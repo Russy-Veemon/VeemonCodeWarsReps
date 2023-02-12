@@ -30,3 +30,10 @@ def print_array(arr):
         string += str(x) +','
     new_string = string[:-1]
     return new_string
+    # return ','.join(map(str, arr))
+    # best practice commented out above using the map function to increase speed of function
+
+# Complete the function which converts hex number (given as a string) to a decimal number.
+
+def hex_to_dec(s):
+    return int(s, 16)
