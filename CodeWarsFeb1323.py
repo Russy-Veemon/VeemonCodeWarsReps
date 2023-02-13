@@ -34,3 +34,26 @@ def largest_pair_sum(numbers):
     #  sort the numbers from largest to smallest
     return numbers[0] + numbers[1]
     # get the sum of the two largest numbers
+
+
+# Complete the function which returns the weekday according to the input number:
+# 1 returns "Sunday"
+# 2 returns "Monday"
+# 3 returns "Tuesday"
+# 4 returns "Wednesday"
+# 5 returns "Thursday"
+# 6 returns "Friday"
+# 7 returns "Saturday"
+# Otherwise returns "Wrong, please enter a number between 1 and 7"
+
+def whatday(day):
+    days_of_week = { 
+        1: 'Sunday',
+        2: 'Monday',
+        3: 'Tuesday',
+        4: 'Wednesday',
+        5: 'Thursday',
+        6: 'Friday',
+        7: 'Saturday'
+    }
+    return days_of_week.get(day, "Wrong, please enter a number between 1 and 7")
