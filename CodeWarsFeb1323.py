@@ -57,3 +57,20 @@ def whatday(day):
         7: 'Saturday'
     }
     return days_of_week.get(day, "Wrong, please enter a number between 1 and 7")
+
+# Given an array of positive integers (the weights of the people), return a new array/tuple of two integers, where the first one is the total weight of team 1, and the second one is the total weight of team 2.
+# Notes
+# Array size is at least 1.
+
+def row_weights(array):
+    team1 = 0
+    team2 = 0
+    for i, weight in enumerate(array):
+    # the enumerate function being used in the for loop returns a series of tuples where
+    #     each tuple contains an index and a corresponding item from the iterable array
+        if i % 2 == 0:
+            team1 += weight
+        #the modulus is used in the if statement to separate the even and odds
+        else:
+            team2 += weight
+    return (team1, team2)
