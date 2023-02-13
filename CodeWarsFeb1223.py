@@ -53,3 +53,15 @@ def arithmetic(a, b, operator):
         return a / b
     else:
         return "Invalid operator"
+    # best practice done in object/dictionary form
+    # return {
+    #     'add': a + b,
+    #     'subtract': a - b,
+    #     'multiply': a * b,
+    #     'divide': a / b,
+    # }[operator]
+
+# Find the total sum of internal angles (in degrees) in an n-sided simple polygon. N will be greater than 2.
+
+def angle(n):
+    return (n-2) * 180
