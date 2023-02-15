@@ -41,3 +41,12 @@ def list_squared(m, n):
 
     # Return the result list.
     return result
+
+# Write a function that returns the total surface area and volume of a box as an array: [area, volume]
+
+def get_size(w,h,d):
+    area = 2 * (w * h + w * d + d * h)
+    # Calculate surface area of the box
+    volume = w * h * d
+     # Calculate volume of the box
+    return [area, volume]
