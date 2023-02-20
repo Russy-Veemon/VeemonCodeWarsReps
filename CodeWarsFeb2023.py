@@ -83,4 +83,5 @@ def sp_eng(sentence):
 # The conversion rate you should use is 6.75 CNY for every 1 USD. All numbers should be represented as a string with 2 decimal places. (e.g. "21.00" NOT "21.0" or "21")
 
 def usdcny(usd):
-    return str((usd)*6.75) + " Chinese Yuan"
+    yuan = (usd)*6.75
+    return "{:.2f} Chinese Yuan".format(yuan)
