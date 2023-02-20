@@ -62,3 +62,8 @@ def evaporator(content, evap_per_day, threshold):
         n += 1
         content *= (1 - (evap_per_day / 100))
     return n
+
+# The cockroach is one of the fastest insects. Write a function which takes its speed in km per hour and returns it in cm per second, rounded down to the integer (= floored).
+
+def cockroach_speed(s):
+    return int((s*100000)/3600)
