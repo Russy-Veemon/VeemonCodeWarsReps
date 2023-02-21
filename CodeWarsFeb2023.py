@@ -85,3 +85,20 @@ def sp_eng(sentence):
 def usdcny(usd):
     yuan = (usd)*6.75
     return "{:.2f} Chinese Yuan".format(yuan)
+
+# Wolves have been reintroduced to Great Britain. You are a sheep farmer, and are now plagued by wolves which pretend to be sheep. Fortunately, you are good at spotting them.
+# Warn the sheep in front of the wolf that it is about to be eaten. Remember that you are standing at the front of the queue which is at the end of the array:
+# [sheep, sheep, sheep, sheep, sheep, wolf, sheep, sheep]      (YOU ARE HERE AT THE FRONT OF THE QUEUE)
+#    7      6      5      4      3            2      1
+# If the wolf is the closest animal to you, return "Pls go away and stop eating my sheep". Otherwise, return "Oi! Sheep number N! You are about to be eaten by a wolf!" where N is the sheep's position in the queue.
+# Note: there will always be exactly one wolf in the array.
+
+def warn_the_sheep(queue):
+    if queue[-1] == 'wolf':
+        return "Pls go away and stop eating my sheep"
+#     checking if the animal in queue is a wolf
+    else:
+        n = queue.index('wolf')
+#         the index() method, which returns the index of the first occurrence of the specified value in the list.
+        return "Oi! Sheep number {}! You are about to be eaten by a wolf!".format(len(queue)-n-1)
+# We calculate the position of the sheep to warn by subtracting the index of the wolf from the length of the queue, and subtracting 1 (since we are at the front of the queue). This gives us the position of the sheep to warn.
