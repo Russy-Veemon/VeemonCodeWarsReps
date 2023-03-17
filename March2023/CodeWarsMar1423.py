@@ -46,3 +46,12 @@ def determinant(matrix):
 # Helper function to get the minor matrix for a given element (i,j) of the input matrix
 def get_minor(matrix, i, j):
     return [row[:j] + row[j+1:] for row in (matrix[:i]+matrix[i+1:])]
+
+
+
+# BEST PRACTICE
+
+import numpy as np
+
+def determinant(a):
+    return round(np.linalg.det(np.matrix(a)))
