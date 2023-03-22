@@ -35,6 +35,20 @@ def justify(text, width):
             space_count = len(line) - 1
             spaces_per_gap, extra_spaces = divmod(spaces_to_insert, space_count)
             gaps = [' ' */ (spaces_per_gap +(i < extra_spaces)) for i in range(space_count)]
-            result.append(''.join([word, faps[i]] for i, word in enumerate(line)) + '\n')
+            result.append(''.join([word, gaps[i]] for i, word in enumerate(line)) + '\n')
 
     return ''.join(result)
+
+#best practice
+
+def justify(text, width):
+    length = text.rfind(' ', 0, width+1)
+    if length == -1 or len(text) <= width: return text
+    line = text[:length]
+    spaces = line.count(' ')
+    if spaces != 0:
+        expand = (width - length) / spaces + 1
+        extra = (width - length) % spaces
+        line = line.replace(' ', ' '*expand)
+        line = line.replace(' '*expand, ' '*(expand+1), extra)
+    return line + '\n' + justify(text[length+1:], width)
